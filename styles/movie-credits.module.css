@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_container h1 {
+  font-weight: 600;
+}
+
+.credits_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  gap: 10px;
+}
+
+.profile {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+.profile_info {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  flex-basis: 35px;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
+.profile_info span:last-child {
+  font-size: 80%;
+  color: #a0a0a0;
+}

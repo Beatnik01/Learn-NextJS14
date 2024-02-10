@@ -1,14 +1,13 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 50px;
   width: 80%;
   margin: 0 auto;
 }
 
 .poster {
   border-radius: 20px;
-  max-width: 70%;
+  max-width: 90%;
   place-self: center;
 }
 
