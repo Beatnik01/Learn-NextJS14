@@ -39,11 +39,11 @@
   gap: 5px;
   flex-direction: column;
   flex-basis: 35px;
-  font-size: 90%;
+  font-size: 1vw;
   white-space: nowrap;
 }
 
 .profile_info span:last-child {
-  font-size: 80%;
+  font-size: 0.8vw;
   color: #a0a0a0;
 }
