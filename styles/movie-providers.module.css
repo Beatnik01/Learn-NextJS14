@@ -9,14 +9,15 @@
 }
 
 .title_container h1 {
+  font-size: 1vw;
   font-weight: 600;
 }
 
 .select_container {
   display: grid;
   grid-template-columns: 1fr 0.5fr 1fr 1fr;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 1vw;
+  margin-top: 1vw;
 }
 
 .select_container select {
@@ -29,8 +30,8 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 1vw;
+  margin-top: 1vw;
 }
 
 .provider {

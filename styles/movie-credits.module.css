@@ -9,6 +9,7 @@
 }
 
 .title_container h1 {
+  font-size: 1vw;
   font-weight: 600;
 }
 
@@ -16,7 +17,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin-top: 20px;
+  margin-top: 1vw;
 }
 
 .credits {
@@ -26,7 +27,7 @@
   justify-content: center;
   width: 80%;
   height: 100%;
-  gap: 10px;
+  gap: 1vw;
 }
 
 .profile {
@@ -36,7 +37,7 @@
 
 .profile_info {
   display: flex;
-  gap: 5px;
+  gap: 0.5vw;
   flex-direction: column;
   flex-basis: 35px;
   font-size: 1vw;
