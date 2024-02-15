@@ -47,7 +47,7 @@ export default function MovieProviders({ id }: { id: string }) {
     setType(e.target.value);
   };
 
-  console.log(type);
+  console.log(code, type, providers);
 
   return (
     <div className={styles.container}>
