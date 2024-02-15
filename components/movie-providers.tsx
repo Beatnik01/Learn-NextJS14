@@ -25,18 +25,19 @@ export default function MovieProviders({ id }: { id: string }) {
   useEffect(() => {
     getProviders(id).then((data) => {
       setProviders(data);
-      setCodes(Object.keys(data));
+      const initCodes = Object.keys(data);
+      setCodes(initCodes);
+      if (initCodes.length > 0) {
+        const initCode = initCodes[0];
+        setCode(initCode);
+        const initTypes = Object.keys(data[initCode]);
+        setTypes(initTypes);
+        if (initTypes.length > 1) {
+          setType(initTypes[1]);
+        }
+      }
     });
   }, [id]);
-
-  useEffect(() => {
-    if (Object.keys(providers).length > 0) {
-      const code = Object.keys(providers)[0];
-      setCode(code);
-      setTypes(Object.keys(providers[code]));
-      setType(types[1]);
-    }
-  }, [providers]);
 
   const handleCodeChange = (e) => {
     setCode(e.target.value);
