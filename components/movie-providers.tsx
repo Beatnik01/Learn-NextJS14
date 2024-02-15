@@ -40,15 +40,15 @@ export default function MovieProviders({ id }: { id: string }) {
   }, [id]);
 
   const handleCodeChange = (e) => {
-    setCode(e.target.value);
+    const newCode = e.target.value;
+    setCode(newCode);
     setTypes(Object.keys(providers[code]));
+    setType(Object.keys(providers[newCode])[1]);
   };
 
   const handleTypeChange = (e) => {
     setType(e.target.value);
   };
-
-  console.log(code, type, providers);
 
   return (
     <div className={styles.container}>

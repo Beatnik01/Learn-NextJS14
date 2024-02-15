@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { API_URL } from "../app/constants";
 import styles from "../styles/movie-credits.module.css";
 
@@ -8,11 +9,13 @@ async function getCredits(id: string) {
   return response.json();
 }
 
-export default async function MovieCredits({ id }: { id: string }) {
-  const credits = await getCredits(id);
-  const onClick = () => {
-    window.location.href = `https://www.themoviedb.org/person/${credits.id}`;
-  };
+export default function MovieCredits({ id }: { id: string }) {
+  const [credits, setCredits] = useState([]);
+
+  useEffect(() => {
+    getCredits(id).then(setCredits);
+  }, [id]);
+
   return (
     <div className={styles.container}>
       <div className={styles.title_container}>
@@ -26,7 +29,9 @@ export default async function MovieCredits({ id }: { id: string }) {
               className={styles.profile}
               src={credit.profile_path}
               alt={credit.name}
-              onClick={onClick}
+              onClick={() => {
+                window.open(`https://www.themoviedb.org/person/${credit.id}`, "_blank");
+              }}
             />
             <div className={styles.profile_info}>
               <span>

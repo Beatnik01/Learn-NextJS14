@@ -43,7 +43,7 @@ export default async function MovieInfo({ id }: { id: string }) {
         </div>
 
         <div className={styles.intro}>
-          <span>“{movie.tagline}”</span>
+          {movie.tagline ? <span>“{movie.tagline}”</span> : null}
           <p>{movie.overview}</p>
         </div>
 

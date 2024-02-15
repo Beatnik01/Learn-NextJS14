@@ -21,7 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5vw;
 }
 
 .title_raiting h3 {
@@ -45,7 +44,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5vw;
 }
 
 .title_pop h3 {
@@ -62,7 +60,7 @@
 .title_date {
   display: flex;
   gap: 0.5vw;
-  margin-bottom: 3vw;
+  margin-bottom: 1vw;
 }
 
 .title_date span {
@@ -85,7 +83,8 @@
 .genres span {
   border: 1px solid white;
   border-radius: 20px;
-  padding: 0.5vw;
+  padding: 0.2vw 0.4vw;
+  font-size: 0.8vw;
 }
 
 .genres span:hover {
