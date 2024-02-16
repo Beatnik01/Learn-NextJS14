@@ -112,7 +112,7 @@
 .info {
   display: flex;
   flex-direction: column;
-  margin-top: 1vw;
+  justify-content: center;
 }
 
 .production {

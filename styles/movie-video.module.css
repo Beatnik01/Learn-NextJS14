@@ -1,16 +1,14 @@
 .container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1vw;
-  margin-top: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .container iframe {
-  border-radius: 10px;
+  border-radius: 20px;
   opacity: 0.8;
   transition: opacity 0.2s ease-in-out;
-  width: 20vw;
+  width: 17vw;
   height: 10vw;
 }
 

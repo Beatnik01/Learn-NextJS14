@@ -10,7 +10,7 @@ export default async function MovieVideos({ id }: { id: string }) {
   const videos = await getVideos(id);
   return (
     <div className={styles.container}>
-      {videos.slice(0, 3).map((video) => (
+      {videos.slice(0, 6).map((video) => (
         <iframe
           key={video.id}
           src={`https://youtube.com/embed/${video.key}`}
