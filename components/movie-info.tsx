@@ -1,6 +1,7 @@
 import { API_URL } from "../app/constants";
 import styles from "../styles/movie-info.module.css";
 import MovieProductions from "./movie-productions";
+import MovieVideos from "./movie-videos";
 
 export async function getMovie(id: string) {
   const response = await fetch(`${API_URL}/${id}`);
@@ -55,12 +56,7 @@ export default async function MovieInfo({ id }: { id: string }) {
           ))}
         </div>
 
-        <h2>Production Companies</h2>
-        <MovieProductions id={id} movie={movie} />
-
-        <a href={movie.homepage} target={"_blank"}>
-          Homepage &rarr;
-        </a>
+        <MovieVideos id={id} />
       </div>
     </div>
   );
